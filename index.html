@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kusina ni vanvan - Homepage</title>
+        <style>
+
+body {
+    background-image: url('images/background.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-position: center center; 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333; /* Text color */
+}
+
+
+        header {
+            background-color: #ffffff;
+            color: white;
+            padding: 20px 10px;
+            text-align: left;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        header p {
+            margin: 10px 0 0;
+            font-size: 1.2em;
+        }
+        .welcome-message {
+        text-align: center;
+        font-size: 1em;
+        color: white;  
+        margin-top: 10px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 1em;
+        }
+        nav a:hover {
+            background-color: #575757;
+            border-radius: 4px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            font-size: 0.9em;
+        }
+        footer a {
+            color: #ff6f61;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://example.com/hero-image.jpg') no-repeat center center/cover;
+            color: white;
+        }
+        .hero h2 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.2em;
+        }
+        .recipes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .recipe-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .recipe-card:hover {
+            transform: translateY(-5px);
+        }
+        .recipe-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .recipe-card h3 {
+            margin: 15px 10px 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+        .recipe-card p {
+            margin: 0 10px 15px;
+            color: #666;
+            font-size: 1em;
+        }
+        section {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .introduction {
+            font-weight: bold;
+            font-style: italic;
+            text-align: center;
+            margin: 20px 0;
+        }
+        iframe {
+            border: 0;
+            width: 100%;
+            height: 300px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        
+        <div class="welcome-message">
+            <h1>Welcome to Kusina ni vanvan</h1>
+            <h2>Bringing Joy to Your Table! Explore mouthwatering recipes, master essential cooking techniques, and find inspiration to create unforgettable culinary moments.</h2>
+        </div>
+        
+        </div>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#recipes">Recipes</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <h2>Elevate Your Cooking Game</h2>
+    <p>Discover exciting recipes, craft delicious dishes, and connect with a community that shares your passion for food!</p>
+</section>
+
+
+    <!-- Recipe Section -->
+<section id="recipes" class="recipes">
+    <div class="recipe-card" onclick="showRecipe('chicken-alfredo')">
+        <img src="images/alfredo.jpg" alt="Chicken Alfredo">
+        <h3>Chicken Alfredo</h3>
+        <p>Creamy pasta with tender chicken and a rich Alfredo sauce.</p>
+    </div>
+    <div class="recipe-card" onclick="showRecipe('banana-bread')">
+        <img src="images/banana.jpg" alt="Banana Bread">
+        <h3>Banana Bread</h3>
+        <p>Moist and flavorful bread made with ripe bananas.</p>
+    </div>
+    <div class="recipe-card" onclick="showRecipe('caesar-salad')">
+        <img src="images/salad.jpg" alt="Caesar Salad">
+        <h3>Caesar Salad</h3>
+        <p>Classic salad with crisp romaine, Parmesan, and a tangy Caesar dressing.</p>
+    </div>
+    <div class="recipe-card" onclick="showRecipe('vegetable-curry')">
+        <img src="images/curry.jpg" alt="Vegetable Curry">
+        <h3>Vegetable Curry</h3>
+        <p>A hearty, spiced curry loaded with fresh vegetables and coconut milk.</p>
+    </div>
+    <div class="recipe-card" onclick="showRecipe('lemon-bars')">
+        <img src="images/lemon.jpg" alt="Lemon Bars">
+        <h3>Lemon Bars</h3>
+        <p>Sweet and tangy dessert bars with a buttery shortbread crust.</p>
+    </div>
+</section>
+
+<!-- Modal -->
+<div id="recipeModal" class="modal">
+    <div class="modal-content">
+        <button class="close" onclick="closeModal()">&times;</button>
+        <h3 id="recipeTitle"></h3>
+        <ul id="recipeSteps"></ul>
+    </div>
+</div>
+
+<script>
+    // Recipe data
+    const recipes = {
+        'chicken-alfredo': {
+            title: 'Chicken Alfredo',
+            steps: [
+                'Cook fettuccine pasta in salted water until al dente.',
+                'Sauté chicken strips in olive oil until golden brown.',
+                'Prepare Alfredo sauce with butter, heavy cream, and Parmesan cheese.',
+                'Combine pasta, chicken, and sauce, mixing until coated.',
+                'Garnish with parsley and serve hot.'
+            ]
+        },
+        'banana-bread': {
+            title: 'Banana Bread',
+            steps: [
+                'Preheat the oven to 350°F (175°C) and grease a loaf pan.',
+                'Mash ripe bananas in a bowl and mix with sugar, eggs, and melted butter.',
+                'Add flour, baking soda, and a pinch of salt. Mix until combined.',
+                'Pour the batter into the prepared pan and bake for 50-60 minutes.',
+                'Cool, slice, and enjoy.'
+            ]
+        },
+        'caesar-salad': {
+            title: 'Caesar Salad',
+            steps: [
+                'Wash and chop fresh romaine lettuce.',
+                'Prepare the dressing with garlic, anchovies, lemon juice, Dijon mustard, and olive oil.',
+                'Toss lettuce with croutons, Parmesan cheese, and dressing.',
+                'Top with additional Parmesan and serve immediately.'
+            ]
+        },
+        'vegetable-curry': {
+            title: 'Vegetable Curry',
+            steps: [
+                'Sauté onions, garlic, and ginger in a large pot with oil.',
+                'Add curry powder, turmeric, and cumin, cooking until aromatic.',
+                'Stir in diced vegetables like carrots, potatoes, and bell peppers.',
+                'Pour in coconut milk and simmer until the vegetables are tender.',
+                'Serve with rice or naan bread.'
+            ]
+        },
+        'lemon-bars': {
+            title: 'Lemon Bars',
+            steps: [
+                'Preheat the oven to 350°F (175°C) and prepare a baking dish.',
+                'Mix butter, sugar, and flour to create a shortbread crust. Bake until golden.',
+                'Combine lemon juice, sugar, eggs, and flour for the filling.',
+                'Pour the filling over the baked crust and bake again until set.',
+                'Cool, dust with powdered sugar, and cut into squares.'
+            ]
+        }
+    };
+
+    // Function to show recipe
+    function showRecipe(recipeKey) {
+        const recipe = recipes[recipeKey];
+        if (recipe) {
+            document.getElementById('recipeTitle').innerText = recipe.title;
+            const stepsList = document.getElementById('recipeSteps');
+            stepsList.innerHTML = '';
+            recipe.steps.forEach(step => {
+                const li = document.createElement('li');
+                li.innerText = step;
+                stepsList.appendChild(li);
+            });
+            document.getElementById('recipeModal').style.display = 'flex';
+        }
+    }
+
+    // Function to close modal
+    function closeModal() {
+        document.getElementById('recipeModal').style.display = 'none';
+    }
+</script>
+
+<!-- CSS -->
+<style>
+    /* Recipe Cards */
+    #recipes {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 16px;
+        padding: 16px;
+    }
+    .recipe-card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .recipe-card img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+    .recipe-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Modal */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Black with transparency */
+        align-items: center;
+        justify-content: center;
+        animation: fadeIn 0.3s ease-out;
+    }
+    .modal-content {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        width: 90%;
+        max-width: 500px;
+        text-align: center;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    }
+    .close {
+        background: none;
+        border: none;
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+</style>
+
+    
+
+<!-- CSS -->
+<style>
+    /* Recipe Cards */
+    #recipes {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 16px;
+        padding: 16px;
+    }
+    .recipe-card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .recipe-card img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+    .recipe-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Modal */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Black with transparency */
+        align-items: center;
+        justify-content: center;
+        animation: fadeIn 0.3s ease-out;
+    }
+    .modal-content {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        width: 90%;
+        max-width: 500px;
+        text-align: center;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    }
+    .close {
+        background: none;
+        border: none;
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+</style>
+
+    
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+     <!-- Header Section -->
+     
+     <header>
+
+        <div class="welcome-message">
+                <h1>Welcome to Kusina ni vanvan</h1>
+            
+            </div>
+        </div>
+       
+ </header>
+
+ <section id="about">
+    <p class="introduction">"Welcome to Kusina ni vanvan—Where Every Bite Tells a Story! Dive into a world of irresistible recipes, expert cooking tips, and endless culinary inspiration to make every meal truly unforgettable."</p>
+    <h2>Our Purpose</h2>
+    <p>At Kusina ni vanvan, we strive to ignite your culinary creativity by providing a variety of easy-to-follow, flavorful, and innovative recipes. Whether you're a beginner or a seasoned cook, our mission is to make cooking a joyful experience and bring people closer through the universal language of food.</p>
+    <h2>About the Creator</h2>
+    <p>Hi there! I’m Ivan Paul Aboy, the creator of Kusina ni vanvan. As someone passionate about both web development and cooking, I built this platform to blend my love for technology with the art of food. With skills in HTML, CSS, and JavaScript, I craft websites that are not only functional but also engaging and user-friendly. I hope this space sparks inspiration and makes your cooking journey delightful!</p>
+</section>
+
+    <footer>
+        <p>Created by Ivan Paul Aboy</p>
+    <div class="social-media">
+        <a href="https://www.facebook.com/share/1B6KSoRBxB/" target="_blank">
+            <img src="images/facebook icon.jpg" alt="Facebook" width="30" height="30">
+        </a>
+        <a href="https://www.tiktok.com/@jassforyou?_t=ZS-8tEzmTPcobK&_r=1" target="_blank">
+            <img src="images/tiktok icon.jpg" alt="Twitter" width="30" height="30">
+        </a>
+        
+    </div>
+</footer>
+     
+    </footer>
+    </section>
+
+    <!-- Contact Us Section -->
+    <header>
+       
+            <div class="welcome-message">
+                    <h1>Welcome to Kusina ni vanvan</h1>
+                
+                </div>
+            </div>
+           
+    </header>
+    <section id="contact">
+        <p class="introduction">"Welcome to our Contact Us page! We value your feedback, questions, and suggestions, and we're here to ensure you have a seamless experience connecting with us."</p>
+        <h2>Contact Methods</h2>
+        <p>Email: ivanpaulaboy06@gmail.com</p>
+        <p>Phone: +639673244774</p>
+        <p>Social Media Links:</p>
+        <div class="social-media">
+            <a href="https://www.facebook.com/share/18e45xu6gC/" target="_blank">
+                <img src="images/facebook icon.jpg" alt="Facebook" width="30" height="30">
+            </a>
+            <a href="https://www.tiktok.com/@ivanpaulaboy?_t=ZS-8tFhxtJN7fc&_r=1" target="_blank">
+                <img src="images/tiktok icon.jpg" alt="Tiktok" width="30" height="30">
+            </a>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3836.7570220389166!2d120.34903977495188!3d15.921795384736544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x339145d16fcc8e79%3A0x821208c424536ac3!2sBinalatongan%20Community%20College!5e0!3m2!1sen!2sph!4v1737338830877!5m2!1sen!2sph" 
+            width="800" 
+            height="600" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    
+    
+    </section>
+    <footer>
+        <p>Email: ivanpaulaboy06@gmail.com</p>
+        <p>Phone: +639673244774</p>
+    <div class="social-media">
+        <a href="https://www.facebook.com/share/18e45xu6gC//" target="_blank">
+            <img src="images/facebook icon.jpg" alt="Facebook" width="30" height="30">
+        </a>
+        <a href="https://www.tiktok.com/@ivanpaulaboy?_t=ZS-8tFhxtJN7fc&_r=1" target="_blank">
+            <img src="images/tiktok icon.jpg" alt="Tiktok" width="30" height="30">
+        </a>
+        
+    </div>
+</footer>
+    
+</body>
+</html>
